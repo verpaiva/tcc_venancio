@@ -1,17 +1,58 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"><title>LeIA – Gerar história</title></head><body data-page="create" data-nav="1" class="">
-<div id="wizard" class="gen"><h1 class="logo" aria-label="LeIA"><small>✦</small>Le<b>IA</b></h1>
-<h2>1. O que você vai viver hoje?</h2><div class="tiles">
-<button class="tile t0" aria-pressed="false" data-v="Mistério"><span>🔍</span>Mistério</button><button class="tile t1" aria-pressed="false" data-v="Amizade"><span>🧑‍🤝‍🧑</span>Amizade</button><button class="tile t2" aria-pressed="false" data-v="Fantasia"><span>🎪</span>Fantasia</button><button class="tile t3" aria-pressed="false" data-v="Aventura"><span>🐉</span>Aventura</button></div>
-<input class="field" placeholder="Outro..." aria-label="Outro tipo de história">
-<h2>2. Onde a história se passa?</h2><div class="tiles">
-<button class="tile t0" aria-pressed="false" data-v="uma floresta"><span>🌲</span>Floresta</button><button class="tile t1" aria-pressed="false" data-v="uma escola"><span>🏫</span>Escola</button><button class="tile t2" aria-pressed="false" data-v="um castelo"><span>🏰</span>Castelo</button><button class="tile t3" aria-pressed="false" data-v="o espaço"><span>🪐</span>Espaço</button></div>
-<input class="field" placeholder="Outro..." aria-label="Outro lugar">
-<h2>3. Qual o personagem?</h2><div class="tiles">
-<button class="tile t0" aria-pressed="false" data-v="Um robô"><span>🤖</span>Robô</button><button class="tile t1" aria-pressed="false" data-v="Uma menina"><span>👧</span>Menina</button><button class="tile t2" aria-pressed="false" data-v="Um dragão"><span>🐲</span>Dragão</button><button class="tile t3" aria-pressed="false" data-v="Um gato"><span>🐱</span>Gato</button></div>
-<input class="field" placeholder="Outro..." aria-label="Outro personagem">
-<h2>Dificuldade da leitura:</h2><div class="diffs">
-<button class="diff" aria-pressed="false" data-v="Fácil"><b>Fácil</b>Frases curtas e palavras simples</button>
-<button class="diff" aria-pressed="true" data-v="Média"><b>Média</b>Frases mais longas e com mais detalhes</button>
-<button class="diff" aria-pressed="false" data-v="Difícil"><b>Difícil</b>Textos mais completos e vocabulário rico</button></div>
-<button class="btn" id="gen">Gerar</button></div>
-<div id="loading" hidden class="gen" style="text-align:center;padding:60px 20px"><div class="spinner"></div><h2 style="margin:0">Criando sua história...</h2></div><script src="js/main.js"></script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>LeIA – Gerar história</title>
+</head>
+
+<body data-page="create" data-nav="1" class="">
+    <div id="wizard" class="gen">
+        <h1 class="logo" aria-label="LeIA"><small>✦</small>Le<b>IA</b></h1>
+        <h2>1. O que você vai viver hoje?</h2>
+        <div class="tiles">
+            <button class="tile t0" aria-pressed="false" data-v="Mistério"><span>🔍</span>Mistério</button><button
+                class="tile t1" aria-pressed="false" data-v="Amizade"><span>🧑‍🤝‍🧑</span>Amizade</button><button
+                class="tile t2" aria-pressed="false" data-v="Fantasia"><span>🎪</span>Fantasia</button><button
+                class="tile t3" aria-pressed="false" data-v="Aventura"><span>🐉</span>Aventura</button>
+        </div>
+        <input class="field" placeholder="Outro..." aria-label="Outro tipo de história">
+        <h2>2. Onde a história se passa?</h2>
+        <div class="tiles">
+            <button class="tile t0" aria-pressed="false" data-v="uma floresta"><span>🌲</span>Floresta</button><button
+                class="tile t1" aria-pressed="false" data-v="uma escola"><span>🏫</span>Escola</button><button
+                class="tile t2" aria-pressed="false" data-v="um castelo"><span>🏰</span>Castelo</button><button
+                class="tile t3" aria-pressed="false" data-v="o espaço"><span>🪐</span>Espaço</button>
+        </div>
+        <input class="field" placeholder="Outro..." aria-label="Outro lugar">
+        <h2>3. Qual o personagem?</h2>
+        <div class="tiles">
+            <button class="tile t0" aria-pressed="false" data-v="Um robô"><span>🤖</span>Robô</button><button
+                class="tile t1" aria-pressed="false" data-v="Uma menina"><span>👧</span>Menina</button><button
+                class="tile t2" aria-pressed="false" data-v="Um dragão"><span>🐲</span>Dragão</button><button
+                class="tile t3" aria-pressed="false" data-v="Um gato"><span>🐱</span>Gato</button>
+        </div>
+        <input class="field" placeholder="Outro..." aria-label="Outro personagem">
+        <h2>Dificuldade da leitura:</h2>
+        <div class="diffs">
+            <button class="diff" aria-pressed="false" data-v="Fácil"><b>Fácil</b>Frases curtas e palavras
+                simples</button>
+            <button class="diff" aria-pressed="true" data-v="Média"><b>Média</b>Frases mais longas e com mais
+                detalhes</button>
+            <button class="diff" aria-pressed="false" data-v="Difícil"><b>Difícil</b>Textos mais completos e vocabulário
+                rico</button>
+        </div>
+        <button class="btn" id="gen">Gerar</button>
+    </div>
+    <div id="loading" hidden class="gen" style="text-align:center;padding:60px 20px">
+        <div class="spinner"></div>
+        <h2 style="margin:0">Criando sua história...</h2>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
